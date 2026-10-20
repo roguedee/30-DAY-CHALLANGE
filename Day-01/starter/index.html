@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 01 — Personal Profile Generator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Day 01: Personal Profile Generator</h1>
+    <p id="instructions">Create a profile object and print a formatted introduction.</p>
+    <section id="app" aria-live="polite">
+      <div class="user-information">
+    <input type="text" name="name" id="name" placeholder="Enter Your Name">
+    <input type="number" name="age" id="age" placeholder="Enter Your Age" min="1">
+    <input type="text" name="course" id="course" placeholder="Enter Your course">
+    <button id="action">GENERATE</button>
+      </div>
+
+      <div class="user-profile-card">
+        <h2 id="users-name"></h2>
+        <h4 id="users-age"></h4>
+        <h4 id="users-course"></h4>
+        <p id="introduction"></p>
+      </div>
+    </section>
+  </main>
+  <script>
+    
+      const button = document.querySelector('#action');
+      const userName = document.querySelector('#users-name')
+      const usersCourse = document.querySelector('#users-course');
+      const usersAge = document.querySelector('#users-age')
+      const introduction = document.querySelector('#introduction');
+      button.addEventListener('click', create);
+      function create(){
+        const name = document.querySelector('#name').value.trim();
+        const age =  document.querySelector('#age').value.trim();
+        const course = document.querySelector('#course').value.trim();
+
+        if(name&&age&&course){
+
+          userName.textContent = name;
+          usersCourse.textContent = course;
+          usersAge.textContent = age;
+
+          introduction.innerHTML = `Hi, My name is ${name}, I am ${age} and I am studying ${course}`
+        } else {
+          alert('Please Input a Value')
+        }
+
+        
+      }
+
+  </script>
+</body>
+</html>
