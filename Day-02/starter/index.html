@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Day 02 — Basketball Stats Calculator</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <main class="container">
+    <h1>Day 02: Basketball Stats Calculator</h1>
+    <p id="instructions">Calculate points, field-goal percentage, and points per game from sample numbers.</p>
+    <section id="app" aria-live="polite">
+      <!-- TODO: Add inputs, buttons, and output elements needed for this project. -->
+        <div class="total-point">
+          <h2>Total Points: <span id="score"></span></h2>
+          <input type="number" id="game1" placeholder="Enter the scores">
+          <input type="number" id="game2" placeholder="Enter the scores">
+          <input type="number" id="game3" placeholder="Enter the scores">
+          <button id="add-score">ADD SCORE</button>
+        </div>
+        <div class="field-goal">
+          <h2>Field Goal Percentage: <span id="field-goal-result"></span>%</h2>
+          <input type="number" id="field-goal-made" placeholder="Field goals made">
+          <input type="number" id="field-goal-attempt" placeholder="Field goals attempted">
+          
+          <button id="calculate-field-goal">Calculate Field Goal Percentage</button>
+        </div>
+        <div class="point-per-game">
+          <h2>Point Per Game <span id="point-per-game-result"></span>PPG</h2>
+          <input type="number" id="games-played" placeholder="Enter Number of Games Played">
+          <button id="calculate-point-per-game">Calculate point per game</button>
+        </div>
+    </section>
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
